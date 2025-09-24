@@ -1,0 +1,7 @@
+-- your code goes here
+select m.match_id as match_id,m.player_1 as player_1,m.player_2 as player_2,m.winner as winner,m.match_date as match_date,p.score as score
+from matches as m
+left join players as p on p.player_name=m.winner
+order by match_date desc
+limit 5;
+
